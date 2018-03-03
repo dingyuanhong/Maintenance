@@ -27,7 +27,7 @@ wget http://pecl.php.net/get/yaf-2.3.5.tgz
 
 #mongo
 wget http://pecl.php.net/get/mongo-1.6.14.tgz
-wget http://pecl.php.net/get/mongodb-1.1.9.tgz
+#wget http://pecl.php.net/get/mongodb-1.1.9.tgz
 wget http://pecl.php.net/get/mongodb-1.2.9.tgz
 
 
@@ -43,8 +43,8 @@ git clone -b 7.0.6-0 https://github.com/ImageMagick/ImageMagick.git
 
 #mysql
 #wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
-wget https://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
-
+#wget https://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
+wget https://downloads.mysql.com/archives/get/file/mysql-8.0.3-rc-linux-glibc2.12-i686.tar
 
 #nginx
 wget http://nginx.org/download/nginx-1.10.2.tar.gz
@@ -57,7 +57,7 @@ wget http://luajit.org/download/LuaJIT-2.0.4.tar.gz
 wget http://down1.chinaunix.net/distfiles/fcgi-2.4.0.tar.gz
 
 #spawn-fcgi
-wget http://www.lighttpd.net/download/spawn-fcgi-1.6.3.tar.gz
+#wget http://www.lighttpd.net/download/spawn-fcgi-1.6.3.tar.gz
 wget http://download.lighttpd.net/spawn-fcgi/releases-1.6.x/spawn-fcgi-1.6.4.tar.gz
 
 #rtmp
