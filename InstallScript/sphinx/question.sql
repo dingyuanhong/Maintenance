@@ -14,3 +14,5 @@ CREATE TABLE `question_counter` (
   `max_id` int(11) NOT NULL COMMENT '每个索引表的最大ID,会实时更新',
   PRIMARY KEY (`counter_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+REPLACE INTO question_counter values(1,0);
