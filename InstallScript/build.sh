@@ -115,7 +115,8 @@ rm -rf fcgi-2.4.0
 #php
 tar -xzvf php-5.6.9.tar.gz
 cd php-5.6.9
-./configure  --prefix=/usr/local/php --with-config-file-path=/usr/local/php/etc --enable-fpm --with-zlib   --enable-mbstring --with-openssl --with-mysql --with-mysqli --with-mysql-sock --enable-gd-native-ttf --enable-pdo --with-gettext --with-curl --with-pdo-mysql --enable-sockets --enable-bcmath --enable-xml --with-bz2 --enable-zip --enable-mbregex --with-mhash --with-pcre-regex --with-gd --enable-sysvsem --enable-sysvshm --with-mcrypt --enable-inline-optimization --disable-debug --with-jpeg-dir=/usr/ --with-png-dir=/usr/ --with-freetype-dir=/usr/ --with-gmp=/usr/local/gmp --without-pear  --disable-phar
+./configure  --prefix=/usr/local/php --with-config-file-path=/usr/local/php/etc --enable-fpm --with-zlib   --enable-mbstring --with-openssl --with-mysql --with-mysqli --with-mysql-sock --enable-gd-native-ttf --enable-pdo --with-gettext --with-curl --with-pdo-mysql --enable-sockets --enable-bcmath --enable-xml --with-bz2 --enable-zip --enable-mbregex --with-mhash --with-pcre-regex --with-gd --enable-sysvsem --enable-sysvshm --with-mcrypt --enable-inline-optimization --disable-debug --with-jpeg-dir=/usr/ --with-png-dir=/usr/ --with-freetype-dir=/usr/ --with-gmp=/usr/local/gmp
+# --without-pear  --disable-phar
 make
 sudo make install
 make clean
