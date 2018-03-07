@@ -17,6 +17,11 @@ firewall-cmd --add-port=99/tcp --permanent
 #upgrade
 firewall-cmd --add-port=100/tcp --permanent
 #websvn
-firewall-cmd --add-port=100/tcp --permanent
+firewall-cmd --add-port=8086/tcp --permanent
+
+#websvn
+firewall-cmd --add-port=105/tcp --permanent
+#websvn
+firewall-cmd --add-port=106/tcp --permanent
 
 firewall-cmd --reload
