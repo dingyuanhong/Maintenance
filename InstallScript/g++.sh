@@ -27,4 +27,6 @@ make install
 
 ln -s /usr/local/lib64/libgcc_s.so /usr/lib64/libgcc_s.so
 ln -s /usr/local/lib64/libgcc_s.so.1 /usr/lib64/libgcc_s.so.1
+rm -f /usr/lib64/libstdc++.so.6
 ln -s /usr/local/lib64/libstdc++.so.6 /usr/lib64/libstdc++.so.6
+#ln -s /usr/lib64/libstdc++.so.6.0.19 /usr/lib64/libstdc++.so.6
