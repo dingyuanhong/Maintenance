@@ -24,3 +24,7 @@ make install
 /usr/sbin/update-alternatives --install  /usr/bin/cc cc /usr/local/bin/x86_64-pc-linux-gnu-gcc 72
 /usr/sbin/update-alternatives --install  /usr/bin/c++ c++ /usr/local/bin/x86_64-pc-linux-gnu-c++ 72
 /usr/sbin/update-alternatives --install  /usr/bin/g++ g++ /usr/local/bin/x86_64-pc-linux-gnu-g++ 72
+
+ln -s /usr/local/lib64/libgcc_s.so /usr/lib64/libgcc_s.so
+ln -s /usr/local/lib64/libgcc_s.so.1 /usr/lib64/libgcc_s.so.1
+ln -s /usr/local/lib64/libstdc++.so.6 /usr/lib64/libstdc++.so.6
