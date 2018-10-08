@@ -68,6 +68,16 @@ cp /usr/local/nginx/bin/spawn* /usr/local/nginx/sbin
 cd ..
 rm -rf spawn-fcgi-1.6.3
 
+#luajit
+tar -xzvf LuaJIT-2.0.4.tar.gz
+cd LuaJIT-2.0.4
+make PREFIX=/usr/local/luajit
+sudo make install PREFIX=/usr/local/luajit
+make clean
+mv /usr/local/luajit/lib/libluajit-5.1.so /usr/local/luajit/lib/libluajit-5.1.so.bak
+cd ..
+rm -rf LuaJIT-2.0.4
+
 #nginx
 tar -xzvf nginx-1.10.2.tar.gz
 cd nginx-1.10.2
@@ -91,16 +101,6 @@ sudo make install
 make clean
 cd ..
 rm -rf nginx-1.10.2
-
-#luajit
-tar -xzvf LuaJIT-2.0.4.tar.gz
-cd LuaJIT-2.0.4
-make PREFIX=/usr/local/luajit
-sudo make install PREFIX=/usr/local/luajit
-make clean
-mv /usr/local/luajit/lib/libluajit-5.1.so /usr/local/luajit/lib/libluajit-5.1.so.bak
-cd ..
-rm -rf LuaJIT-2.0.4
 
 #fcgi
 tar -xzvf fcgi-2.4.0.tar.gz
@@ -166,6 +166,14 @@ make clean
 cd ..
 rm -rf swoole-1.9.8
 
+cd ImageMagick
+./configure
+make
+sudo make install
+make clean
+cd ..
+rm -rf ImageMagick
+
 #ImageMagick
 tar -xzvf imagick-3.4.3.tgz
 cd imagick-3.4.3
@@ -175,14 +183,6 @@ sudo make install
 make clean
 cd ..
 rm -rf imagick-3.4.3
-
-cd ImageMagick
-./configure
-make
-sudo make install
-make clean
-cd ..
-rm -rf ImageMagick
 
 #luarocks安装lua模块
 tar -zxvf luarocks-2.4.3.tar.gz

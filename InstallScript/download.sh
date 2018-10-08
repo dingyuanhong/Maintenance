@@ -44,7 +44,10 @@ git clone -b 7.0.6-0 https://github.com/ImageMagick/ImageMagick.git
 #mysql
 #wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
 #wget https://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
-wget https://downloads.mysql.com/archives/get/file/mysql-8.0.3-rc-linux-glibc2.12-i686.tar
+#wget https://downloads.mysql.com/archives/get/file/mysql-8.0.3-rc-linux-glibc2.12-i686.tar
+wget https://downloads.mysql.com/archives/get/file/mysql-8.0.3-rc-linux-glibc2.12-x86_64.tar
+#wget https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.12-linux-glibc2.12-i686.tar.xz
+#wget https://cdn.mysql.com//Downloads/MySQL-8.0/mysql-8.0.12-linux-glibc2.12-x86_64.tar.xz
 
 #nginx
 wget http://nginx.org/download/nginx-1.10.2.tar.gz
