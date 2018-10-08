@@ -45,10 +45,25 @@ firewall-cmd --reload
 yum install gcc
 yum install g++
 yum -y install automake autoconf
-#开发包
+#lua开发包
 yum -y install readline-devel
+#nginx需求
+yum install libpcre3 libpcre3-dev
+yum install openssl openssl-devel
 
 yum -y install mhash-devel libxslt-devel libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel libxml2 libxml2-devel zlib zlib-devel glibc glibc-devel glib2 glib2-devel bzip2 bzip2-devel ncurses ncurses-devel curl curl-devel e2fsprogs e2fsprogs-devel krb5 krb5-devel libidn libidn-devel
 
-yum install openssl openssl-devel
-yum install libpcre3 libpcre3-dev
+#lua开发包
+#apt-get install libreadline-dev
+#nginx需求
+#apt-get install libpcre3 libpcre3-dev
+#apt-get install openssl libssl-dev
+#ln -s /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib
+#php需求
+#apt-get install libxml2 libxml2-dev
+#apt-get install libbz2-dev
+#apt-get install curl libcurl3 libcurl3-dev
+#apt-get install libjpeg-dev libpng-dev
+#apt-get install libfreetype6-dev
+#luarocks
+#apt-get install unzip

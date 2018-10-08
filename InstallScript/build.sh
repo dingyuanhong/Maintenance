@@ -51,22 +51,10 @@ rm -rf memcached-1.4.24
 tar -xzvf  redis-3.0.1.tar.gz
 cd redis-3.0.1
 make
-make PREFIX=/usr/local/redis install
+sudo make PREFIX=/usr/local/redis install
 make clean
 cd ..
 rm -rf redis-3.0.1
-
-#spawn-fcgi
-tar -xzvf spawn-fcgi-1.6.3.tar.gz
-cd spawn-fcgi-1.6.3
-./autogen.sh
-./configure --prefix=/usr/local/nginx
-make
-sudo make install
-make clean
-cp /usr/local/nginx/bin/spawn* /usr/local/nginx/sbin
-cd ..
-rm -rf spawn-fcgi-1.6.3
 
 #luajit
 tar -xzvf LuaJIT-2.0.4.tar.gz
@@ -74,7 +62,7 @@ cd LuaJIT-2.0.4
 make PREFIX=/usr/local/luajit
 sudo make install PREFIX=/usr/local/luajit
 make clean
-mv /usr/local/luajit/lib/libluajit-5.1.so /usr/local/luajit/lib/libluajit-5.1.so.bak
+sudo mv /usr/local/luajit/lib/libluajit-5.1.so /usr/local/luajit/lib/libluajit-5.1.so.bak
 cd ..
 rm -rf LuaJIT-2.0.4
 
@@ -102,6 +90,18 @@ make clean
 cd ..
 rm -rf nginx-1.10.2
 
+#spawn-fcgi
+tar -xzvf spawn-fcgi-1.6.4.tar.gz
+cd spawn-fcgi-1.6.4
+./autogen.sh
+./configure --prefix=/usr/local/nginx
+make
+sudo make install
+make clean
+sudo cp /usr/local/nginx/bin/spawn* /usr/local/nginx/sbin
+cd ..
+rm -rf spawn-fcgi-1.6.4
+
 #fcgi
 tar -xzvf fcgi-2.4.0.tar.gz
 cd fcgi-2.4.0
@@ -125,7 +125,7 @@ rm -rf php-5.6.9
 
 #pear扩展
 wget  http://pear.php.net/go-pear.phar 
-/usr/local/php/bin/php go-pear.phar
+sudo /usr/local/php/bin/php go-pear.phar
 
 #yaf
 tar -zxvf yaf-2.3.5.tgz
@@ -189,7 +189,9 @@ tar -zxvf luarocks-2.4.3.tar.gz
 cd luarocks-2.4.3
 ./configure --prefix=/usr/local/luarocks
 make build
-make install
+sudo make install
+cd ..
+rm -rf luarocks-2.4.3
 
 #luarocks安装lua模块(自由指定编译依赖目录)
 tar -zxvf luarocks-2.4.3.tar.gz
@@ -201,7 +203,9 @@ cd luarocks-2.4.3
 --with-lua-include=/usr/local/luajit/include/luajit-2.0 \
 --with-lua-lib=/usr/local/luajit/lib
 make build
-make install
+sudo make install
+cd ..
+rm -rf luarocks-2.4.3
 
 #librdkafka
 cd librdkafka
@@ -215,6 +219,7 @@ cd php-rdkafka
 /usr/local/php/bin/phpize  && ./configure --with-php-config=/usr/local/php/bin/php-config
 make 
 sudo make install
+cd ..
 
 #php-redis
 tar -zxvf redis-4.0.2.tgz
