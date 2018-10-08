@@ -101,3 +101,6 @@ git clone -b 0.11.1.x https://github.com/edenhill/librdkafka
 
 #php-rdkafka
 git clone https://github.com/arnaud-lb/php-rdkafka.git
+
+#php-redis
+wget http://pecl.php.net/get/redis-4.0.2.tgz

@@ -215,3 +215,13 @@ cd php-rdkafka
 /usr/local/php/bin/phpize  && ./configure --with-php-config=/usr/local/php/bin/php-config
 make 
 sudo make install
+
+#php-redis
+tar -zxvf redis-4.0.2.tgz
+cd redis-4.0.2
+/usr/local/php/bin/phpize  && ./configure --with-php-config=/usr/local/php/bin/php-config
+make
+sudo make install
+make clean
+cd ..
+rm -rf redis-4.0.2
