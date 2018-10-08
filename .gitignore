@@ -1,0 +1,3 @@
+/conf/nginx/mime.types
+/conf/nginx/fastcgi_params
+.svn
