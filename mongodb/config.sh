@@ -30,8 +30,8 @@ rs.config();
 #获取状态
 rs.status();
 #删除节点
-rs.remove("127.0.0.1:27017",{force:true});
+#rs.remove("127.0.0.1:27017",{force:true});
 #增加节点
-rs.add("ip:port");
+#rs.add("ip:port");
 #强制激活主从
 rs.slaveOk();

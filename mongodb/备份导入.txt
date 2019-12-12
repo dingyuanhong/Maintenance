@@ -1,0 +1,12 @@
+#阿里云备份后导入
+cat xx.ar| mongorestore -h xxx --port xxx -u xxx -p xxx --drop --gzip --archive -vvvv --stopOnError
+
+#云mongodb备份
+mkdir /data/backup/20191213
+/usr/local/mongodb/bin/mongodump --host dds-bp1e5147aef52a841634-pub.mongodb.rds.aliyuncs.com:3717 --oplog -o /data/backup/20191213 --authenticationDatabase admin -u root
+
+#全量备份
+mongodump -h 192.168.xx.xx --port 27017 --oplog -o /data/backup/tmp27107/
+
+#全量导入
+mongorestore -h 192.168.xx.xx:27027 -d chelun --dir /data/backup/tmp27107/
